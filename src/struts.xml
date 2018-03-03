@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<package name="module-etudiant" namespace="/p" extends="struts-default">
+	<!-- User -->
+		<action name="UserAjouter" method="ajouter"
+			class="miniProjet.presentation.UserActions">
+			<result name="list" >P</result>
+			<result name="success">/pages/AjouterUser.jsp</result>
+			<result name="error">/pages/AjouterUser.jsp</result>
+		</action>
+		
+		<action name="UserModifier" method="modifier"
+			class="miniProjet.presentation.UserActions">
+			<result name="list" >P</result>
+			<result name="success">/pages/User.jsp</result>
+			<result name="error">/pages/User.jsp</result>
+		</action>
+		
+		<action name="UserSupprimer" method="supprimer"
+			class="miniProjet.presentation.UserActions">
+			<result name="list" >P</result>
+			<result name="success">/pages/AjouterUser.jsp</result>
+			<result name="error">/pages/AjouterUser.jsp</result>
+		</action>
+		
+		<action name="User" method="chercher"
+			class="miniProjet.presentation.UserActions">
+			<result name="list" >P</result>
+			<result name="success">/pages/User.jsp</result>
+			<result name="error">/pages/User.jsp</result>
+		</action>
+		
+	<!-- And User -->
+		<action name="Profil" method="ajouter"
+			class="miniProjet.presentation.ProfilActions">
+			<result name="list" >P</result>
+			<result name="success">/pages/AjouterProfil.jsp</result>
+			<result name="error">/pages/AjouterProfil.jsp</result>
+		</action>
+	</package>
+
+</struts>
